@@ -1,4 +1,3 @@
-// ========== КОРЗИНА С LOCALSTORAGE ==========
 let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
 let cartCountEl = document.getElementById("cart-count");
 if(cartCountEl) cartCountEl.textContent = cartCount;
@@ -8,13 +7,11 @@ function updateCartCount() {
     localStorage.setItem('cartCount', cartCount);
 }
 
-// Добавление в корзину
 document.querySelectorAll(".add").forEach(function(button){
   button.addEventListener("click", function(e){
     cartCount++;
     updateCartCount();
     
-    // Анимация кнопки
     button.style.transform = "scale(1.2)";
     setTimeout(()=>{button.style.transform="scale(1)";}, 150);
     
@@ -25,7 +22,6 @@ document.querySelectorAll(".add").forEach(function(button){
   });
 });
 
-// Функция уведомлений
 function showToast(message, isError = false) {
     let toast = document.createElement('div');
     toast.textContent = message;
@@ -47,7 +43,6 @@ function showToast(message, isError = false) {
     setTimeout(() => toast.remove(), 2500);
 }
 
-// Добавляем стиль для анимации тоста
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeInOut {
@@ -59,7 +54,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ========== БРОНИРОВАНИЕ ==========
 let bookingForm = document.getElementById("booking-form");
 if(bookingForm){
   bookingForm.addEventListener("submit", function(event){
@@ -71,7 +65,6 @@ if(bookingForm){
     let time = document.getElementById("booking-time")?.value;
     let guests = document.getElementById("booking-guests")?.value;
     
-    // Валидация
     let isValid = true;
     if(!name || name.length < 2){
       showError("name-error", "Введите корректное имя");
@@ -116,7 +109,6 @@ function clearError(elementId){
   if(el) el.textContent = "";
 }
 
-// ========== ПРОФИЛЬ (ВХОД/РЕГИСТРАЦИЯ) ==========
 let loginForm = document.getElementById("login-form");
 let registerForm = document.getElementById("register-form");
 let tabBtns = document.querySelectorAll(".tab-btn");
@@ -141,7 +133,6 @@ if(tabBtns.length){
   });
 }
 
-// Вход
 let profileForm = document.getElementById("profile-form");
 if(profileForm){
   profileForm.addEventListener("submit", function(event){
@@ -163,7 +154,6 @@ if(profileForm){
   });
 }
 
-// Регистрация
 let registerBtn = document.getElementById("register-btn");
 if(registerBtn){
   registerBtn.addEventListener("click", function(){
@@ -193,7 +183,6 @@ if(registerBtn){
     }
     showToast("🎉 Регистрация успешна! Теперь войдите.");
     
-    // Переключение на вкладку входа
     if(tabBtns.length){
       tabBtns[0].click();
     }
@@ -201,7 +190,6 @@ if(registerBtn){
   });
 }
 
-// ========== ФИЛЬТРАЦИЯ МЕНЮ ==========
 function filterMenu(category){
   let cards = document.querySelectorAll(".card");
   let btns = document.querySelectorAll(".filters button");
@@ -234,7 +222,6 @@ function sortMenu(type){
   cards.forEach(card => grid.appendChild(card));
 }
 
-// ========== СЛАЙДЕР ==========
 let slider = document.querySelector(".grid");
 if(slider){
   slider.addEventListener("wheel", (e) => {
@@ -248,7 +235,6 @@ function scrollMenu(value){
   if(grid) grid.scrollLeft += value;
 }
 
-// ========== КОНТАКТНАЯ ФОРМА В ФУТЕРЕ ==========
 let contactForm = document.getElementById("contact-form");
 if(contactForm){
   contactForm.addEventListener("submit", function(e){
@@ -257,13 +243,17 @@ if(contactForm){
     contactForm.reset();
   });
 }
-
-// ========== КНОПКИ НА ГЛАВНОЙ ==========
 let orderBtn = document.querySelector(".order");
 let reserveBtn = document.querySelector(".reserve");
+
 if(orderBtn){
-  orderBtn.addEventListener("click", () => window.location.href = "menu.html");
+  orderBtn.addEventListener("click", function() {
+    window.location.href = "menu.html";
+  });
 }
+
 if(reserveBtn){
-  reserveBtn.addEventListener("click", () => window.location.href = "booking.html");
+  reserveBtn.addEventListener("click", function() {
+    window.location.href = "booking.html";
+  });
 }
