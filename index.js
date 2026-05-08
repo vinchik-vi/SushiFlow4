@@ -15,7 +15,6 @@ document.querySelectorAll(".add").forEach(function(button){
     button.style.transform = "scale(1.2)";
     setTimeout(()=>{button.style.transform="scale(1)";}, 150);
     
-    // Название товара
     let card = button.closest('.card');
     let title = card ? card.querySelector('h3')?.innerText : 'Товар';
     showToast(`✅ ${title} добавлен в корзину!`);
@@ -241,19 +240,5 @@ if(contactForm){
     e.preventDefault();
     showToast("📨 Спасибо! Ваше сообщение отправлено.");
     contactForm.reset();
-  });
-}
-let orderBtn = document.querySelector(".order");
-let reserveBtn = document.querySelector(".reserve");
-
-if(orderBtn){
-  orderBtn.addEventListener("click", function() {
-    window.location.href = "menu.html";
-  });
-}
-
-if(reserveBtn){
-  reserveBtn.addEventListener("click", function() {
-    window.location.href = "booking.html";
   });
 }
