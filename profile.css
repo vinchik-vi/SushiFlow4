@@ -1,0 +1,154 @@
+body{
+  margin:0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background:#0a0a0a;
+  color:white;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #1A1A1A;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #D6232A;
+}
+nav a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+nav a:hover{
+    color: #D6232A;
+}
+#cart-count{
+    background: #D6232A;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.icons span{
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.profile{
+  padding: 60px 20px;
+  text-align:center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.profile h2{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.subtitle{
+  color: #aaa;
+  margin-bottom: 30px;
+}
+.profile-tabs{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  background: #1A1A1A;
+  padding: 5px;
+  border-radius: 16px;
+}
+.tab-btn{
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.tab-btn.active{
+  background: #D6232A;
+}
+.profile-form{
+  background:#1A1A1A;
+  padding: 30px;
+  border-radius: 24px;
+  text-align:left;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.tab-content{
+  display: none;
+}
+.tab-content.active{
+  display: block;
+}
+.profile-form input{
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background: #2a2a2a;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+.profile-form input:focus{
+  outline: none;
+  border-color: #D6232A;
+  box-shadow: 0 0 0 3px rgba(214,35,42,0.2);
+}
+.submit-btn{
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #D6232A;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.submit-btn:hover{
+  background: #b51c22;
+  transform: translateY(-2px);
+}
+.form-footnote{
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 20px;
+}
+.result-message{
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  display: none;
+}
+.result-message.success{
+  display: block;
+  background: #1e3a2f;
+  color: #4ade80;
+  border-left: 4px solid #4ade80;
+}
+@media (max-width: 600px){
+  header{
+    padding: 15px 20px;
+  }
+  nav a{
+    margin: 0 8px;
+    font-size: 14px;
+  }
+  .profile-form{
+    padding: 20px;
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль | SushiFlow</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+   <header>
+        <div class="logo">SushiFlow</div>
+       <nav>
+  <a href="index.html">Главная</a>
+  <a href="menu.html">Меню</a>
+  <a href="booking.html">Бронирование</a>
+  <a href="contacts.html">Контакты</a>
+</nav>
+       <div class="icons">
+        <span class="cart-icon">🛒<span id="cart-count">0</span></span>
+        <span><a href="profile.html">👤</a></span>
+        </div>
+    </header>
+<section class="profile">
+
+<h2>Личный кабинет</h2>
+<p class="subtitle">Войдите или зарегистрируйтесь</p>
+
+<div class="profile-tabs">
+  <button class="tab-btn active" data-tab="login">Вход</button>
+  <button class="tab-btn" data-tab="register">Регистрация</button>
+</div>
+
+<form id="profile-form" class="profile-form">
+  <div id="login-form" class="tab-content active">
+    <input type="email" id="login-email" placeholder="Email" required>
+    <input type="password" id="login-password" placeholder="Пароль" required>
+    <button type="submit" class="submit-btn">Войти</button>
+    <p class="form-footnote">Нет аккаунта? Зарегистрируйтесь!</p>
+  </div>
+
+  <div id="register-form" class="tab-content">
+    <input type="text" id="reg-name" placeholder="Ваше имя" required>
+    <input type="email" id="reg-email" placeholder="Email" required>
+    <input type="tel" id="reg-phone" placeholder="Телефон" required>
+    <input type="password" id="reg-password" placeholder="Пароль" required>
+    <input type="password" id="reg-password-confirm" placeholder="Подтвердите пароль" required>
+    <button type="button" id="register-btn" class="submit-btn">Зарегистрироваться</button>
+  </div>
+</form>
+<div id="profile-result" class="result-message"></div>
+</section>
+ <script src="index.js"></script>
+</body>
+</html>

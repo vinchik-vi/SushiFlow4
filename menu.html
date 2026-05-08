@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Меню | SushiFlow</title>
+<link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+ <header>
+        <div class="logo">SushiFlow</div>
+       <nav>
+  <a href="index.html">Главная</a>
+  <a href="menu.html">Меню</a>
+  <a href="booking.html">Бронирование</a>
+  <a href="contacts.html">Контакты</a>
+</nav>
+       <div class="icons">
+        <span id="cart">🛒<span id="cart-count">0</span></span>
+        <span><a href="profile.html">👤</a></span>
+        </div>
+    </header>
+<section class="menu">
+
+<h2>Наше меню</h2>
+
+<div class="controls">
+  <div class="filters">
+    <button onclick="filterMenu('all')" class="active">Все</button>
+    <button onclick="filterMenu('rolls')">Роллы</button>
+    <button onclick="filterMenu('sets')">Сеты</button>
+  </div>
+
+  <select onchange="sortMenu(this.value)">
+    <option value="default">Сортировка</option>
+    <option value="low">Сначала дешёвые</option>
+    <option value="high">Сначала дорогие</option>
+  </select>
+</div>
+<div class="slider-buttons">
+  <button onclick="scrollMenu(-200)">←</button>
+  <button onclick="scrollMenu(200)">→</button>
+</div>
+<div class="grid" id="menu-grid">
+
+  <div class="card" data-category="rolls" data-price="800">
+    <div class="img-wrap">
+                <img src="img/fil.jpg" alt="">
+                </div>
+                <h3>Филадельфия</h3>
+                <p>лосось, сыр</p>
+                <p>500 г • 600 ккал</p>
+                <p class="price">800 P</p>
+                <button class="add">В корзину</button>
+  </div>
+  <div class="card" data-category="rolls" data-price="700">
+   <div class="img-wrap">
+                <img src="img/cal.jpg" alt="">
+                </div>
+                <h3>Калифорния</h3>
+                <p>лосось, сыр</p>
+<p>500 г • 600 ккал</p>
+<p class="price">700 P</p>
+<button class="add">В корзину</button>
+  </div>
+  <div class="card" data-category="sets" data-price="2000">
+    <div class="img-wrap">
+      <img src="img/set.jpg">
+    </div>
+    <h3>Сет Дракон</h3>
+    <p>Угорь, авокадо</p>
+    <p>500 г • 600 ккал</p>
+    <p class="price">2000 p</p>
+    <button class="add">В корзину</button>
+  </div>
+<div class="card" data-category="rolls" data-price="750">
+    <div class="img-wrap">
+                <img src="img/los.jpg" alt="">
+                </div>
+                <h3>Лосось ролл</h3>
+                <p>лосось, сыр</p>
+                <p>500 г • 600 ккал</p>
+                <p class="price">750 P</p>
+                <button class="add">В корзину</button>
+  </div>
+   <div class="card" data-category="rolls" data-price="800">
+    <div class="img-wrap">
+                <img src="img/fil.jpg" alt="">
+                </div>
+                <h3>Филадельфия</h3>
+                <p>лосось, сыр</p>
+                <p>500 г • 600 ккал</p>
+                <p class="price">800 P</p>
+                <button class="add">В корзину</button>
+  </div>
+  <div class="card" data-category="rolls" data-price="700">
+   <div class="img-wrap">
+                <img src="img/cal.jpg" alt="">
+                </div>
+                <h3>Калифорния</h3>
+                <p>лосось, сыр</p>
+<p>500 г • 600 ккал</p>
+<p class="price">700 P</p>
+<button class="add">В корзину</button>
+  </div>
+  <div class="card" data-category="sets" data-price="2000">
+    <div class="img-wrap">
+      <img src="img/set.jpg">
+    </div>
+    <h3>Сет Дракон</h3>
+    <p>Угорь, авокадо</p>
+    <p>500 г • 600 ккал</p>
+    <p class="price">2000 p</p>
+    <button class="add">В корзину</button>
+  </div>
+<div class="card" data-category="rolls" data-price="750">
+    <div class="img-wrap">
+                <img src="img/los.jpg" alt="">
+                </div>
+                <h3>Лосось ролл</h3>
+                <p>лосось, сыр</p>
+                <p>500 г • 600 ккал</p>
+                <p class="price">750 P</p>
+                <button class="add">В корзину</button>
+  </div>
+</div>
+
+</section>
+ <script src="index.js"></script>
+</body>
+</html>

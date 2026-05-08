@@ -1,0 +1,136 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#000;
+  color:#fff;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #1A1A1A;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #D6232A;
+}
+nav a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+.icons span{
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#cart-count{
+    background: #D6232A;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.menu{
+  padding:60px;
+  text-align:center;
+}
+
+.grid{
+  display:flex;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  gap:20px;
+}
+.grid::-webkit-scrollbar-thumb{
+    background: #D6232A;
+    border-radius: 10px;
+}
+
+.card{
+  min-width:220px;
+  flex: 0 0 auto;
+  background:#1A1A1A;
+  border-radius:16px;
+  padding:15px;
+  transform: 0.3s;
+}
+
+.img-wrap{
+  height:180px;
+  overflow:hidden;
+}
+
+.img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.controls{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.filters button{
+  margin-right:10px;
+  padding:10px 15px;
+  border:none;
+  border-radius:10px;
+  background:#1A1A1A;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.filters button.active,
+.filters button:hover{
+  background:#D6232A;
+}
+
+select{
+  padding:10px;
+  border-radius:10px;
+  background:#1A1A1A;
+  color:white;
+  border:none;
+}
+
+.card p{
+  font-size:14px;
+  color:#ccc;
+  margin:5px 0;
+}
+.slider-buttons{
+  text-align:right;
+  margin-bottom:10px;
+}
+
+.slider-buttons button{
+  margin-left:5px;
+  padding:8px 12px;
+  border:none;
+  border-radius:8px;
+  background:#D6232A;
+  color:white;
+  cursor:pointer;
+}
+
+.add{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #D6232A;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add:hover{
+    background: #ff2f37;
+}

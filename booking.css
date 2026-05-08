@@ -1,0 +1,151 @@
+body{
+  margin:0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background:#0a0a0a;
+  color:white;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #1A1A1A;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #D6232A;
+    letter-spacing: 1px;
+}
+nav a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+nav a:hover{
+    color: #D6232A;
+}
+.icons span{
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#cart-count{
+    background: #D6232A;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.menu{
+  padding: 40px 20px;
+  text-align:center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.menu h2{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.subtitle{
+  color: #aaa;
+  margin-bottom: 30px;
+}
+.booking-form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  width: 100%;
+  background: #1A1A1A;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background: #2a2a2a;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus{
+  outline: none;
+  border-color: #D6232A;
+  box-shadow: 0 0 0 3px rgba(214,35,42,0.2);
+}
+.booking-form textarea{
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+.booking-form button{
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #D6232A;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+.booking-form button:hover{
+  background: #b51c22;
+  transform: translateY(-2px);
+}
+.booking-form button:active{
+  transform: translateY(0);
+}
+.error-message{
+  color: #ff6b6b;
+  font-size: 12px;
+  text-align: left;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+.result-message{
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #1A1A1A;
+  display: none;
+}
+.result-message.success{
+  display: block;
+  background: #1e3a2f;
+  color: #4ade80;
+  border-left: 4px solid #4ade80;
+}
+.result-message.error{
+  display: block;
+  background: #3a1e1e;
+  color: #ff6b6b;
+  border-left: 4px solid #ff6b6b;
+}
+@media (max-width: 600px){
+  header{
+    padding: 15px 20px;
+  }
+  nav a{
+    margin: 0 8px;
+    font-size: 14px;
+  }
+  .booking-form{
+    padding: 20px;
+  }
+  .menu{
+    padding: 30px 15px;
+  }
+}

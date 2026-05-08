@@ -1,0 +1,194 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: white;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #1A1A1A;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #D6232A;
+}
+nav a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+.icons span{
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#cart-count{
+    background: #D6232A;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.hero{
+    height: 500px;
+    background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.74)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.buttons button{
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.order{
+    background:#D6232A ;
+    color: white;
+}
+.reserve{
+    background: #1A1A1A;
+    color: white;
+    border: 1px solid #D6232A;
+}
+.buttons button:hover{
+    transform: scale(1.05);
+}
+.menu{
+    padding: 60px;
+    text-align: center;
+}
+.menu h1{
+    margin-bottom: 40px;
+}
+.grid{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.card{
+    background: #1A1A1A;
+    border-radius: 16px;
+    padding: 15px;
+    min-width:220px;
+    flex: 0 0 auto;
+    transition: 0.3s;
+}
+.img-wrap{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+.img-wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.card h3{
+    margin: 10px 0;
+    font-size: 18px;
+}
+.price{
+    color: #D6232A;
+    font-size: 16px;
+}
+
+.add{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #D6232A;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add:hover{
+    background: #ff2f37;
+}
+footer{
+  background:#1A1A1A;
+  color:white;
+  padding:50px 60px 20px 60px;
+  font-size:14px;
+}
+.footer-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:space-between;
+}
+.footer-section{
+  flex:1 1 200px;
+  min-width:200px;
+}
+.footer-section h4{
+  color:#D6232A;
+  margin-bottom:10px;
+}
+.footer-section a{
+  color:#D6232A;
+  text-decoration:none;
+}
+.footer-section a:hover{
+  text-decoration:underline;
+}
+.social-icons a{
+  margin-right:10px;
+  font-size:20px;
+  display:inline-block;
+}
+#contact-form input,
+#contact-form textarea{
+  width:100%;
+  padding:8px;
+  margin-bottom:8px;
+  border-radius:8px;
+  border:none;
+}
+#contact-form button{
+  padding:10px;
+  width:100%;
+  border:none;
+  border-radius:12px;
+  background:#D6232A;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+#contact-form button:hover{
+  background:#ff2f37;
+}
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  border-top:1px solid #333;
+  padding-top:10px;
+  font-size:13px;
+  color:#ccc;
+}
+html{
+    scroll-behavior: smooth;
+}
+#ac{
+    color:#D6232A;
+}

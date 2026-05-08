@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Бронирование | SushiFlow</title>
+<link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+ <header>
+        <div class="logo">SushiFlow</div>
+       <nav>
+  <a href="index.html">Главная</a>
+  <a href="menu.html">Меню</a>
+  <a href="booking.html">Бронирование</a>
+  <a href="contacts.html">Контакты</a>
+</nav>
+       <div class="icons">
+        <span class="cart-icon">🛒<span id="cart-count">0</span></span>
+        <span><a href="profile.html">👤</a></span>
+        </div>
+    </header>
+<section class="menu">
+  <h2>Бронирование столика</h2>
+  <p class="subtitle">Забронируйте столик в ресторане SushiFlow</p>
+<form id="booking-form" class="booking-form">
+
+  <input type="text" id="booking-name" placeholder="Ваше имя" required>
+  <div class="error-message" id="name-error"></div>
+
+  <input type="tel" id="booking-phone" placeholder="Телефон" required>
+  <div class="error-message" id="phone-error"></div>
+
+  <input type="date" id="booking-date" required>
+
+  <select id="booking-time" required>
+    <option value="" disabled selected>Выберите время</option>
+    <option>12:00</option>
+    <option>13:00</option>
+    <option>14:00</option>
+    <option>15:00</option>
+    <option>16:00</option>
+    <option>17:00</option>
+    <option>18:00</option>
+    <option>19:00</option>
+    <option>20:00</option>
+    <option>21:00</option>
+    <option>22:00</option>
+  </select>
+
+  <select id="booking-guests" required>
+    <option value="" disabled selected>Количество гостей</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10+</option>
+  </select>
+
+  <textarea id="booking-comment" placeholder="Особые пожелания (опционально)"></textarea>
+
+  <button type="submit">Забронировать столик</button>
+</form>
+<div id="booking-result" class="result-message"></div>
+</section>
+ <script src="index.js"></script>
+</body>
+</html>
